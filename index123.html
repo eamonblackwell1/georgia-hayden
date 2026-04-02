@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Georgia & Hayden — Okinawa 2027 | Married in Japan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Sen:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cream: #FAF8F5;
+      --dark: #1a1a1a;
+      --darker: #111111;
+      --burgundy: #722F37;
+      --gold: #B8977E;
+      --text-dark: #1a1a1a;
+      --text-grey: #888;
+      --text-light: rgba(250, 248, 245, 0.75);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Sen', sans-serif;
+      font-size: 16px;
+      line-height: 1.8;
+      color: var(--text-dark);
+      background: var(--cream);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3 { font-family: 'Cormorant Garamond', serif; }
+    h1 { font-size: clamp(48px, 6vw, 80px); font-weight: 300; line-height: 1.1; }
+    h2 { font-size: clamp(36px, 4vw, 52px); font-weight: 300; line-height: 1.15; }
+    h3 { font-size: clamp(22px, 2.5vw, 28px); font-weight: 400; }
+
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 60px; }
+
+    .section-light { background: var(--cream); color: var(--text-dark); padding: 100px 0; }
+    .section-dark { background: var(--dark); color: var(--cream); padding: 100px 0; }
+    .section-dark-large { background: var(--dark); color: var(--cream); padding: 140px 0; }
+    .section-burgundy { background: var(--burgundy); color: var(--cream); padding: 100px 0; text-align: center; }
+
+    .label {
+      font-family: 'Sen', sans-serif;
+      font-size: 11px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+
+    .label-dark {
+      font-family: 'Sen', sans-serif;
+      font-size: 11px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--burgundy);
+      margin-bottom: 16px;
+    }
+
+    .accent-line-burgundy {
+      width: 40px; height: 2px; background: var(--burgundy); margin: 24px 0;
+    }
+
+    .accent-line-gold {
+      width: 40px; height: 2px; background: var(--gold); margin: 24px 0;
+    }
+
+    p { margin-bottom: 1.2em; }
+    p:last-child { margin-bottom: 0; }
+
+    /* Hero */
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background: var(--darker);
+      color: var(--cream);
+    }
+
+    .hero-copy {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 60px 70px;
+      text-align: left;
+      background: linear-gradient(135deg, #1a1a1a 0%, #101010 100%);
+    }
+
+    .hero-media {
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    .hero-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    .hero h1 { margin-bottom: 24px; }
+    .hero .tagline {
+      font-family: 'Sen', sans-serif;
+      font-size: 13px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 32px;
+    }
+    .hero .details {
+      font-family: 'Sen', sans-serif;
+      font-size: 14px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--text-light);
+      line-height: 2.2;
+    }
+
+    /* Image Break */
+    .image-break {
+      height: 68vh;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+    .image-break::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(rgba(17,17,17,0.1), rgba(17,17,17,0.15));
+    }
+
+    /* Image Placeholder */
+    .image-placeholder {
+      background: #e8e4df;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-grey);
+      font-family: 'Sen', sans-serif;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      border: 1px dashed #ccc;
+    }
+
+    .image-placeholder-break {
+      height: 50vh;
+      background: #d4cfc8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-grey);
+      font-family: 'Sen', sans-serif;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    /* Timeline */
+    .timeline-flow {
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+      flex-wrap: wrap;
+      margin-top: 48px;
+    }
+    .timeline-item {
+      text-align: center;
+      max-width: 200px;
+    }
+    .timeline-number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 48px;
+      font-weight: 300;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+    .timeline-title {
+      font-family: 'Sen', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .timeline-desc {
+      font-family: 'Sen', sans-serif;
+      font-size: 14px;
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+
+    /* Option Cards */
+    .options-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .option-card {
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 36px;
+      transition: all 0.3s ease;
+    }
+    .option-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--gold);
+    }
+
+    .option-card-light {
+      border: 1px solid rgba(0,0,0,0.08);
+      padding: 36px;
+      transition: all 0.3s ease;
+    }
+    .option-card-light:hover {
+      transform: translateY(-2px);
+      border-color: var(--burgundy);
+    }
+
+    .option-tag {
+      display: inline-block;
+      font-family: 'Sen', sans-serif;
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      background: rgba(184, 151, 126, 0.1);
+      padding: 6px 14px;
+      margin-bottom: 16px;
+    }
+
+    .option-tag-light {
+      display: inline-block;
+      font-family: 'Sen', sans-serif;
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--burgundy);
+      background: rgba(114, 47, 55, 0.06);
+      padding: 6px 14px;
+      margin-bottom: 16px;
+    }
+
+    .card-accent { width: 20px; height: 2px; background: var(--gold); margin-bottom: 16px; }
+    .card-accent-light { width: 20px; height: 2px; background: var(--burgundy); margin-bottom: 16px; }
+
+    .option-card h3 { margin-bottom: 12px; color: var(--cream); }
+    .option-card p { font-size: 15px; color: var(--text-light); line-height: 1.7; }
+
+    .option-card-light h3 { margin-bottom: 12px; color: var(--text-dark); }
+    .option-card-light p { font-size: 15px; color: var(--text-grey); line-height: 1.7; }
+
+    /* Venue Image Grid */
+    .venue-images {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-top: 24px;
+    }
+    .venue-images .image-placeholder {
+      aspect-ratio: 3/2;
+      font-size: 10px;
+    }
+    .venue-images img {
+      aspect-ratio: 3/2;
+      object-fit: cover;
+      object-position: center;
+      width: 100%;
+      display: block;
+    }
+
+    /* Venue Section */
+    .venue-block {
+      margin-bottom: 80px;
+      padding-bottom: 80px;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+    }
+    .venue-block:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .venue-meta {
+      display: flex;
+      gap: 40px;
+      margin-top: 16px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    .venue-meta-item {
+      font-family: 'Sen', sans-serif;
+      font-size: 13px;
+      color: var(--text-grey);
+      letter-spacing: 1px;
+    }
+    .venue-meta-item strong {
+      color: var(--text-dark);
+      font-weight: 600;
+    }
+
+    /* Cost Table */
+    .cost-table { width: 100%; border-collapse: collapse; margin-top: 32px; }
+    .cost-table th, .cost-table td {
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+      font-family: 'Sen', sans-serif;
+      font-size: 15px;
+    }
+    .cost-table th { text-align: left; font-weight: 600; }
+    .cost-table td:last-child { text-align: right; }
+    .total-row td {
+      font-weight: 700;
+      font-size: 17px;
+      border-top: 2px solid var(--burgundy);
+      border-bottom: none;
+      padding-top: 20px;
+    }
+
+    /* Fee Box */
+    .fee-box {
+      background: var(--dark);
+      color: var(--cream);
+      padding: 48px;
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .fee-amount {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(36px, 5vw, 56px);
+      font-weight: 300;
+      margin: 16px 0 8px;
+    }
+    .fee-equiv {
+      font-family: 'Sen', sans-serif;
+      font-size: 14px;
+      color: var(--gold);
+      letter-spacing: 2px;
+    }
+
+    /* Handle Grid */
+    .handle-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+    }
+    .handle-grid h3 { margin-bottom: 20px; }
+    .handle-list {
+      list-style: none;
+      padding: 0;
+    }
+    .handle-list li {
+      font-size: 15px;
+      color: var(--text-light);
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    /* Steps Grid */
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 48px;
+      text-align: center;
+      margin-top: 48px;
+    }
+    .step-number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 56px;
+      font-weight: 300;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+    .step-title {
+      font-family: 'Sen', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .step-desc {
+      font-size: 14px;
+      color: var(--text-light);
+      line-height: 1.7;
+    }
+
+    /* Budget Note */
+    .budget-note {
+      background: rgba(114, 47, 55, 0.04);
+      padding: 32px;
+      margin-top: 40px;
+      border-left: 3px solid var(--burgundy);
+    }
+    .budget-note p {
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    /* Bilingual callout */
+    .bilingual-callout {
+      background: rgba(184, 151, 126, 0.1);
+      border: 1px solid rgba(184, 151, 126, 0.2);
+      padding: 32px;
+      margin-top: 48px;
+      text-align: center;
+    }
+    .bilingual-callout .japanese {
+      font-size: 20px;
+      color: var(--gold);
+      margin-bottom: 8px;
+      letter-spacing: 2px;
+    }
+    .bilingual-callout p {
+      font-size: 14px;
+      color: var(--text-light);
+    }
+
+    /* Payment note */
+    .payment-note {
+      text-align: center;
+      margin-top: 48px;
+      font-size: 13px;
+      color: var(--text-light);
+      letter-spacing: 1px;
+    }
+
+    /* Fade in animations */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .container { padding: 0 28px; }
+      .section-light, .section-dark, .section-dark-large { padding: 70px 0; }
+      .hero { grid-template-columns: 1fr; min-height: auto; }
+      .hero-copy { padding: 44px 28px; }
+      .hero-media { min-height: 45vh; }
+      .image-break, .image-placeholder-break { height: 48vh; }
+      .handle-grid { grid-template-columns: 1fr; }
+      .steps-grid { grid-template-columns: 1fr; gap: 40px; }
+      .timeline-flow { gap: 32px; }
+      .venue-images { grid-template-columns: 1fr; }
+      .venue-meta { gap: 16px; }
+      .options-grid { grid-template-columns: 1fr; }
+      .fee-box { padding: 32px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero-copy">
+      <div class="tagline">Okinawa, Japan</div>
+      <h1>Georgia & Hayden</h1>
+      <div class="accent-line-gold"></div>
+      <div class="details">
+        October 2027<br>
+        30 to 50 Guests<br>
+        Okinawa, Japan
+      </div>
+    </div>
+    <div class="hero-media">
+      <img src="../.cursor/projects/Users-eamonblackwell-Georgia-Hayden/assets/ryo-yoshitake-Fim4XEASDZc-unsplash-4695fea4-b307-4d76-b3c3-f652e50367f8.png" alt="Aerial Okinawa coastline and tropical greenery">
+    </div>
+  </section>
+
+  <!-- ============ YOUR VISION ============ -->
+  <section class="section-light">
+    <div class="container fade-in">
+      <div class="label-dark">YOUR VISION</div>
+      <h2>A garden party on the other side of the world.</h2>
+      <div class="accent-line-burgundy"></div>
+      <p>You want your favourite people gathered in one place, somewhere beautiful, somewhere that feels nothing like home. Not a beach ceremony. Not a ballroom. A garden. Green, lush, open sky. The kind of place where your proposal on that rainy hillside in St Kilda would feel right at home.</p>
+      <p>You want everyone relaxed. Parents who have never left Australia feeling comfortable and looked after. Sisters and mates making a holiday out of it. Good food on the table, proper food, the kind you both seek out. Drinks flowing. And when the night gets going, you want dancing. Not a polite shuffle. Real dancing, the kind that makes the best weddings the best weddings.</p>
+      <p>Eleven years together, since you were sixteen and seventeen. A proposal that was a decade in the making. This is the celebration that matches the weight of that. Not over the top. Not stiff. Just everyone you love, in a setting that stops them in their tracks, having the best time of their lives. That is what we are building for you.</p>
+    </div>
+  </section>
+
+  <!-- ============ IMAGE BREAK 1 ============ -->
+  <div class="image-break" style="background-image: url('../.cursor/projects/Users-eamonblackwell-Georgia-Hayden/assets/yasuaki-uechi-JdE62Hcw8x4-unsplash-3e2fa2d7-12a4-4e14-bf3e-d12734c00341.png');"></div>
+
+  <!-- ============ TIMELINE OVERVIEW ============ -->
+  <section class="section-dark">
+    <div class="container fade-in">
+      <div class="label" style="text-align:center;">AT A GLANCE</div>
+      <h2 style="text-align:center;">Your Okinawa Weekend</h2>
+      <div class="timeline-flow">
+        <div class="timeline-item">
+          <div class="timeline-number">01</div>
+          <div class="timeline-title">Arrival</div>
+          <div class="timeline-desc">Land in Okinawa. Welcome dinner with your crew.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-number">02</div>
+          <div class="timeline-title">Wedding Day</div>
+          <div class="timeline-desc">Private vows. Garden ceremony. Dinner, drinks, dancing.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-number">03</div>
+          <div class="timeline-title">Recovery</div>
+          <div class="timeline-desc">Brunch together. Beach time. Guests explore or depart.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DAY 1 ============ -->
+  <section class="section-light">
+    <div class="container fade-in">
+      <div class="label-dark">DAY ONE</div>
+      <h2>Arrival</h2>
+      <div class="accent-line-burgundy"></div>
+      <p>Your guests arrive in Okinawa. For most of them, this is their first time in Japan. Some have never left Australia. The warm subtropical air hits them at the airport and everything already feels different.</p>
+      <p>We arrange airport transfers and get everyone settled at their accommodation. In the evening, you host a casual welcome dinner. Nothing formal. A long table at a local restaurant, cold Orion beers, platters of Okinawan food, your family meeting Hayden's family properly for the first time in this setting. It sets the tone for everything that follows: relaxed, social, no agenda.</p>
+      <p>You and Hayden can use this evening to hand out a simple guest guide we prepare in advance. Where to eat, what to see, how to get around. Your parents will appreciate it.</p>
+    </div>
+  </section>
+
+  <!-- ============ IMAGE BREAK 2 ============ -->
+  <div class="image-break" style="background-image: url('../.cursor/projects/Users-eamonblackwell-Georgia-Hayden/assets/okinawa_night-51fe9ba7-716d-419b-94b3-11f821c80162.png');"></div>
+
+  <!-- ============ DAY 2: WEDDING DAY ============ -->
+  <section class="section-dark-large">
+    <div class="container fade-in">
+      <div class="label">DAY TWO</div>
+      <h2>Wedding Day</h2>
+      <div class="accent-line-gold"></div>
+      <p style="color: var(--text-light);">The morning starts quietly. Just the two of you over breakfast, reading your private vows to each other before anyone else is awake. This is your moment. No audience, no nerves.</p>
+      <p style="color: var(--text-light);">In the early afternoon, you get ready. Georgia, your hair and makeup artist arrives at your room. Hayden, you get dressed somewhere nearby, close enough to feel the energy building. Mid-afternoon, your guests gather in a garden setting. Green all around. You walk down the aisle. Short vows, exactly how you want them. You are married.</p>
+      <p style="color: var(--text-light);">The ceremony flows into cocktails, then dinner. A seated meal with food worth remembering. Wine, champagne, Okinawan awamori if your mates are brave. As the evening deepens, the music picks up. And you dance. Everyone dances. This is the part you have been looking forward to.</p>
+    </div>
+  </section>
+
+  <!-- ============ VENUE OPTIONS ============ -->
+  <section class="section-light" style="padding: 120px 0;">
+    <div class="container">
+      <div class="label-dark">THE VENUE</div>
+      <h2>Four settings we have researched for you.</h2>
+      <div class="accent-line-burgundy"></div>
+      <p>Each of these venues can deliver your garden ceremony, a seated reception with premium dining, and the capacity for 30 to 50 guests. They are located across different parts of Okinawa, and we have shortlisted them for your June scouting trip.</p>
+
+      <!-- VENUE 1: KIRANAH RESORT -->
+      <div class="venue-block fade-in" style="margin-top: 60px;">
+        <span class="option-tag-light">Forest Hilltop</span>
+        <h3>Southern Chapel, Kiranah Resort Okinawa</h3>
+        <div class="venue-meta">
+          <div class="venue-meta-item"><strong>Location:</strong> Yaese-cho, southern Okinawa</div>
+          <div class="venue-meta-item"><strong>Drive:</strong> 30 min from Naha Airport</div>
+          <div class="venue-meta-item"><strong>Capacity:</strong> 20 to 80 guests</div>
+        </div>
+        <p>The newest wedding venue on the island, opened in 2023. Kiranah sits on a forested hilltop surrounded by golf course and untouched greenery. No beach in sight. The ceremony takes place in a wood-and-glass chapel wrapped in forest, with reception halls that open onto ocean-view terraces. A live sanshin performance is standard. The standout: a terrace grill where the chef cooks in front of your guests. State-of-the-art sound and AV equipment in both reception halls.</p>
+        <p>Food is outstanding. Rated 4.85 out of 5 by real couples. The venue is operated by Novarese, one of Japan's most respected wedding companies. They have an English website and are comfortable with international couples. The hilltop isolation means noise restrictions are likely minimal, which is good for dancing.</p>
+        <p><strong>Estimated cost (40 guests):</strong> AUD $30,000 to $40,000 including ceremony, reception, catering, and standard inclusions. At the upper edge of your budget with premium food upgrades.</p>
+        <div class="venue-images">
+          <img src="kira1.jpg" alt="Kiranah Resort terrace with ocean view" style="width:100%; height:100%; object-fit:cover;">
+          <img src="kira2.jpg" alt="Kiranah Resort terrace dining" style="width:100%; height:100%; object-fit:cover;">
+          <img src="kira3.jpg" alt="Kiranah Resort chapel interior" style="width:100%; height:100%; object-fit:cover;">
+          <img src="kira4.jpg" alt="Kiranah Resort intimate reception" style="width:100%; height:100%; object-fit:cover;">
+        </div>
+      </div>
+
+      <!-- VENUE 2: MOON BEACH -->
+      <div class="venue-block fade-in">
+        <span class="option-tag-light">Tropical Garden</span>
+        <h3>Moon Beach Hotel</h3>
+        <div class="venue-meta">
+          <div class="venue-meta-item"><strong>Location:</strong> Onna Village, west coast</div>
+          <div class="venue-meta-item"><strong>Drive:</strong> 50 min from Naha Airport</div>
+          <div class="venue-meta-item"><strong>Capacity:</strong> Up to 50+ for reception</div>
+        </div>
+        <p>A heritage resort built in 1975, designated as one of Japan's Modern Movement architectural landmarks. The vibe here is old Hawaii, exactly the feeling Georgia described from her aunt and uncle's wedding. Over 350 mature palm trees. Sprawling tropical gardens. A retro-charm that newer resorts simply cannot replicate.</p>
+        <p>The ceremony option that stands out: the Banyan Tree Garden Wedding. You exchange vows beneath a sacred banyan tree, a living canopy of trailing aerial roots surrounded by lush tropical gardens. There is also the Mahina Garden option, a higher-elevation garden ceremony with greenery all around and ocean as a distant backdrop. Five dedicated reception spaces including indoor-outdoor garden party areas and terrace dining. Charcoal-grilled options available for the food-focused.</p>
+        <p>Capacity for the garden ceremony may need confirmation for 50 guests. We will verify this directly. The resort setting means guests can stay on-site.</p>
+        <p><strong>Estimated cost (40 guests):</strong> AUD $20,000 to $35,000. The most flexible pricing of the four options. Operated by Festina Wedding (a subsidiary of Watabe Wedding, Japan's largest resort wedding company).</p>
+        <div class="venue-images">
+          <img src="moon1.jpg" alt="Moon Beach banyan tree ceremony with guests" style="width:100%; height:100%; object-fit:cover;">
+          <img src="moon2.jpg" alt="Moon Beach garden ceremony with floral arch" style="width:100%; height:100%; object-fit:cover;">
+          <img src="moon3.jpg" alt="Moon Beach banyan tree ceremony setup" style="width:100%; height:100%; object-fit:cover;">
+          <img src="moon4.jpg" alt="Moon Beach terrace dining with palm trees" style="width:100%; height:100%; object-fit:cover;">
+        </div>
+      </div>
+
+      <!-- VENUE 3: SOUTH GATE HOTEL OKINAWA -->
+      <div class="venue-block fade-in">
+        <span class="option-tag-light">Urban Ocean View</span>
+        <h3>South Gate Hotel Okinawa</h3>
+        <div class="venue-meta">
+          <div class="venue-meta-item"><strong>Location:</strong> Naha City, Tomarin waterfront</div>
+          <div class="venue-meta-item"><strong>Drive:</strong> 11 min from Naha Airport</div>
+          <div class="venue-meta-item"><strong>Capacity:</strong> 3 to 50 guests (small group plan)</div>
+        </div>
+        <p>This is a different kind of option. South Gate Hotel opens in May 2026, making it the newest wedding venue in Okinawa. It is operated by Plan Do See, one of Japan's most respected hospitality groups. They run The Sodoh Higashiyama in Kyoto and The Aoyama Grand Hotel in Tokyo. The food pedigree is real: the sister restaurant holds a Michelin star, and every venue has a private open kitchen so your guests watch the chefs work as the courses arrive.</p>
+        <p>The setting is urban rather than resort. Ocean-view chapel and reception on the hotel's top floor, looking out over the Naha waterfront. Three reception venues available, with the entire floor reserved exclusively for your wedding. Ceremony options include chapel, garden, and shrine styles. Attire is through The Treat Dressing, which carries brands from New York, Paris, Milan, and London. Everything from the ceremony to the after-party can happen within the hotel.</p>
+        <p>The biggest advantage here: accessibility. Eleven minutes from the airport. Walking distance to Naha's restaurants, shops, and nightlife. For your parents and guests who have never left Australia, this is by far the easiest venue to navigate. No 75-minute resort drive. No remote peninsula. They land, they are there.</p>
+        <p>We want to be upfront: this is not the lush tropical garden setting of the other three venues. It is a stylish city hotel with ocean views. The "garden ceremony" option needs to be confirmed by Juri to understand exactly what that space looks like. If the garden vibe is your priority, the other three venues deliver it more naturally. But if you value great food, easy logistics for your guests, and the strongest price point on this list, South Gate deserves a look.</p>
+        <p><strong>Estimated cost (40 guests):</strong> approximately ¥1,129,000 (AUD $10,300) on the small group plan. At 50 guests: ¥1,271,820 (AUD $11,600). This is the most affordable venue on this list by a significant margin, leaving substantial room for premium add-ons, a DJ, upgraded florals, and our planning fee, all within your AUD $30,000 floor.</p>
+        <div class="venue-images">
+          <img src="southgate1.jpg" alt="South Gate Hotel reception with ocean view" style="width:100%; height:100%; object-fit:cover;">
+          <img src="southgate2.jpg" alt="South Gate Hotel garden ceremony" style="width:100%; height:100%; object-fit:cover;">
+          <img src="southgate3.jpg" alt="South Gate Hotel chapel with greenery" style="width:100%; height:100%; object-fit:cover;">
+          <img src="southgate4.webp" alt="South Gate Hotel banquet hall" style="width:100%; height:100%; object-fit:cover;">
+        </div>
+      </div>
+
+      <!-- VENUE 4: THE BUSENA TERRACE -->
+      <div class="venue-block fade-in">
+        <span class="option-tag-light">Resort Garden</span>
+        <h3>The Busena Terrace</h3>
+        <div class="venue-meta">
+          <div class="venue-meta-item"><strong>Location:</strong> Cape Busena, Nago City</div>
+          <div class="venue-meta-item"><strong>Drive:</strong> 75 min from Naha Airport</div>
+          <div class="venue-meta-item"><strong>Capacity:</strong> Up to 50 guests (garden ceremony)</div>
+        </div>
+        <p>One of Okinawa's top five-star resorts, sitting on its own private peninsula. The Busena Terrace is one of the few venues in Okinawa that offers a dedicated garden ceremony: a proper grass-lawn ceremony surrounded by tropical landscaping with unobstructed bay views. Not a beach setup. Not a chapel. A real garden.</p>
+        <p>The ceremony fee is approximately ¥326,700 (AUD $2,970) and includes pastor, musicians, choir, bridal attendant, flowers, and wedding certificate. For the reception, you have access to the resort's French restaurant Fanuan (ocean-view, up to 50 guests) or larger banquet rooms up to 228 square metres. Food is rated 4.45 out of 5 on Japanese wedding review sites. French-continental cuisine with Okinawan ingredients, including premium steak courses.</p>
+        <p>The resort's semi-custom model means you order only what you need rather than being locked into a package. The banquet rooms are large enough for a proper dance floor. The remote peninsula location means your guests can stay on-site, and the surrounding area is peaceful.</p>
+        <p>One restriction: only hotel-contracted photographers are permitted. We would need to work within their vendor list or negotiate a bring-in arrangement.</p>
+        <p><strong>Estimated cost (40 guests):</strong> AUD $16,000 to $25,000 for ceremony and reception. The most budget-friendly of the four options, leaving significant room for premium upgrades, a DJ, and guest transport.</p>
+        <div class="venue-images">
+          <img src="busena1.png" alt="Busena Terrace garden ceremony setup" style="width:100%; height:100%; object-fit:cover;">
+          <img src="busena2.jpg" alt="Busena Terrace ocean view ceremony" style="width:100%; height:100%; object-fit:cover;">
+          <img src="busena3.jpg" alt="Busena Terrace reception dining room" style="width:100%; height:100%; object-fit:cover;">
+          <img src="busena5.png" alt="Busena Terrace beach and grounds" style="width:100%; height:100%; object-fit:cover;">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ DAY 3 ============ -->
+  <section class="section-light">
+    <div class="container fade-in">
+      <div class="label-dark">DAY THREE</div>
+      <h2>Recovery</h2>
+      <div class="accent-line-burgundy"></div>
+      <p>No alarms. You wake up married. A late brunch with whoever surfaces, recapping the night before. This is often the meal people remember most, when the formality is gone and everyone is still buzzing from the night before.</p>
+      <p>The rest of the day is open. Some guests will want beach time. Some will want to explore. Your younger siblings and friends who want to make a holiday of it can head to the mainland from here, hitting Tokyo, Kyoto, and Osaka on their own itinerary. We can put together a simple travel guide for them.</p>
+      <p>You and Hayden start your honeymoon. You mentioned wanting a mix of beach and exploring. Okinawa's outer islands are perfect for a few days of quiet, and then you can hop back to the mainland for cities you have not seen yet.</p>
+    </div>
+  </section>
+
+  <!-- ============ WEATHER NOTE ============ -->
+  <section class="section-dark">
+    <div class="container fade-in">
+      <div class="label">TIMING</div>
+      <h2>Why late October is the sweet spot.</h2>
+      <div class="accent-line-gold"></div>
+      <p style="color: var(--text-light);">September is still peak typhoon season in Okinawa, with two to three typhoons typically approaching each month. By October that drops significantly, and the last two weeks of October are historically the most settled. Temperatures sit at a comfortable 25 to 28 degrees, humidity drops, and Naha actually records some of its sunniest days of the year between typhoon events.</p>
+      <p style="color: var(--text-light);">We recommend targeting <strong style="color: var(--cream);">October 18 to 31, 2027</strong>. Close to your November anniversary. Warm enough for outdoor everything. Cool enough that your guests are not melting in formal clothes. And every venue we have shortlisted has an indoor rain backup if needed.</p>
+      <p style="color: var(--text-light);">A weekday wedding in October can save up to 30% on venue costs compared to a weekend booking, and availability is much easier to lock in.</p>
+    </div>
+  </section>
+
+  <!-- ============ WHAT WE HANDLE ============ -->
+  <section class="section-dark" style="border-top: 1px solid rgba(255,255,255,0.05);">
+    <div class="container fade-in">
+      <div class="label">WHAT WE DO</div>
+      <h2>What Married in Japan handles.</h2>
+      <div class="accent-line-gold" style="margin-bottom: 48px;"></div>
+      <div class="handle-grid">
+        <div>
+          <h3 style="color: var(--cream);">Before the Trip</h3>
+          <ul class="handle-list">
+            <li>Venue research, outreach, and contract negotiation in Japanese</li>
+            <li>Vendor sourcing: photographer, florist, hair and makeup, DJ or musician</li>
+            <li>Budget planning and ongoing cost tracking in AUD</li>
+            <li>Timeline and run sheet creation</li>
+            <li>Guest logistics: accommodation recommendations, transport coordination</li>
+            <li>Guest guide: a simple document with travel tips, restaurant picks, and key info</li>
+            <li>Welcome dinner planning and restaurant booking</li>
+            <li>Regular check-in calls as the wedding takes shape</li>
+            <li>Kimono rental research if you want to incorporate Japanese elements</li>
+          </ul>
+        </div>
+        <div>
+          <h3 style="color: var(--cream);">On the Ground</h3>
+          <ul class="handle-list">
+            <li>Juri and Eamon present in Okinawa for the full wedding weekend</li>
+            <li>All Japanese-language vendor communication and coordination</li>
+            <li>Day-of timeline management and troubleshooting</li>
+            <li>Venue setup oversight</li>
+            <li>Guest wrangling and logistics</li>
+            <li>Welcome dinner coordination</li>
+            <li>Ceremony and reception coordination</li>
+            <li>Any last-minute changes or issues handled before they reach you</li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="margin-top: 48px; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.06);">
+        <h3 style="color: var(--cream); margin-bottom: 16px;">What You Handle</h3>
+        <ul class="handle-list">
+          <li>Your own flights and accommodation (we provide recommendations)</li>
+          <li>Guest communication and RSVPs</li>
+          <li>Registry wedding in Australia</li>
+          <li>Personal touches: vow writing, playlist input, any DIY elements you want</li>
+        </ul>
+      </div>
+
+      <div class="bilingual-callout">
+        <div class="japanese">日本語対応</div>
+        <p>Juri is a native Japanese speaker and handles all vendor communication in Japanese. Every email, every phone call, every contract negotiation. No lost-in-translation moments. No relying on Google Translate. This is one of the biggest reasons couples work with us.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ INVESTMENT ============ -->
+  <section class="section-light" style="padding: 120px 0;">
+    <div class="container fade-in">
+      <div class="label-dark">INVESTMENT</div>
+      <h2>What this costs.</h2>
+      <div class="accent-line-burgundy"></div>
+
+      <div class="fee-box" style="margin-top: 40px;">
+        <div class="label">PLANNING FEE</div>
+        <div class="fee-amount">$6,750 USD</div>
+        <div class="fee-equiv">Approximately AUD $9,800</div>
+      </div>
+
+      <p>The planning fee covers everything listed above: venue research, vendor sourcing, Japanese-language coordination, budget management, guest logistics, and on-the-ground presence in Okinawa for the full wedding weekend. This fee is separate from venue and vendor costs.</p>
+
+      <h3 style="margin-top: 48px; margin-bottom: 8px;">Estimated venue and vendor costs (40 guests)</h3>
+      <p style="font-size: 14px; color: var(--text-grey); margin-bottom: 0;">Ranges reflect the four shortlisted venues. All figures in AUD.</p>
+
+      <table class="cost-table">
+        <tr><th>Category</th><td></td></tr>
+        <tr><td>Venue hire and ceremony</td><td>$5,000 – $8,000</td></tr>
+        <tr><td>Catering (seated dinner, 40 guests)</td><td>$7,000 – $12,000</td></tr>
+        <tr><td>Drinks package</td><td>$2,000 – $3,500</td></tr>
+        <tr><td>Bridal attire (rental)</td><td>$2,500 – $4,000</td></tr>
+        <tr><td>Photography and album</td><td>$3,500 – $5,500</td></tr>
+        <tr><td>Hair and makeup</td><td>$600 – $1,200</td></tr>
+        <tr><td>Flowers and decor</td><td>$1,500 – $3,000</td></tr>
+        <tr><td>Music / DJ / sound equipment</td><td>$800 – $2,000</td></tr>
+        <tr><td>Wedding cake</td><td>$300 – $500</td></tr>
+        <tr><td>Welcome dinner (40 guests)</td><td>$2,000 – $3,500</td></tr>
+        <tr><td>Guest transport and logistics</td><td>$600 – $1,500</td></tr>
+        <tr><td>Miscellaneous (MC, certificates, etc.)</td><td>$700 – $1,000</td></tr>
+        <tr class="total-row"><td><strong>Estimated total (excl. planning fee)</strong></td><td><strong>$27,000 – $46,000</strong></td></tr>
+      </table>
+
+      <div class="budget-note">
+        <p><strong>A note on your budget.</strong> Your stated range of AUD $30,000 to $40,000 is realistic for a 30 to 40 guest wedding at The Busena Terrace, Moon Beach, or South Gate Hotel, where venue and vendor costs sit in the lower half of these ranges. At Kiranah Resort, 40 guests with premium food pushes toward the upper boundary. South Gate Hotel offers the strongest value, but all four venues can work within your range at 30 to 40 guests.</p>
+        <p>At 50 guests, per-head catering and drinks costs push the total higher. We recommend building the budget at 40 guests and treating additional guests as a stretch scenario. We will present a detailed line-item budget on our next call with exact figures once you have chosen your preferred venue.</p>
+        <p>The planning fee sits on top of these venue and vendor costs. Your total outlay including our fee will range from approximately AUD $37,000 (South Gate or Busena at 30 guests) to AUD $56,000 (Kiranah at 50 guests with premium options). The mid-range for most couples at 40 guests lands around AUD $42,000 to $48,000 all in.</p>
+      </div>
+      <p style="font-size: 12px; color: var(--text-grey); margin-top: 18px;">Exchange rates used: ¥1 = AUD $0.0091 | AUD $1 = USD $0.69</p>
+    </div>
+  </section>
+
+  <!-- ============ JUNE SCOUTING TRIP ============ -->
+  <section class="section-dark">
+    <div class="container fade-in">
+      <div class="label">YOUR JUNE TRIP</div>
+      <h2>Seeing it for yourselves.</h2>
+      <div class="accent-line-gold"></div>
+      <p style="color: var(--text-light);">You are already planning to be in Okinawa in June. That is a significant advantage. Rather than choosing a venue from photos and descriptions alone, you can walk the grounds, taste the food, and feel the space.</p>
+      <p style="color: var(--text-light);">If you decide to move forward with us before June, we will coordinate venue visits at each of the four shortlisted locations. We will handle the scheduling, the Japanese-language communication, and prepare specific questions to ask at each venue: outdoor ceremony capacity for 50, dance floor and sound setup, latest permitted time for music, and detailed per-head pricing.</p>
+      <p style="color: var(--text-light);">When you are back in Tokyo, Juri and I would love to take you both out for dinner and talk through what you saw. No pressure. Just good food and conversation.</p>
+    </div>
+  </section>
+
+  <!-- ============ NEXT STEPS ============ -->
+  <section class="section-dark" style="border-top: 1px solid rgba(255,255,255,0.05);">
+    <div class="container fade-in">
+      <div class="label" style="text-align:center;">NEXT STEPS</div>
+      <h2 style="text-align:center;">How we move forward.</h2>
+      <div class="steps-grid">
+        <div>
+          <div class="step-number">01</div>
+          <div class="step-title">We Talk</div>
+          <div class="step-desc">We walk through this proposal on our Thursday call. You ask questions. We refine. If a venue jumps out, we dig deeper.</div>
+        </div>
+        <div>
+          <div class="step-number">02</div>
+          <div class="step-title">You Commit</div>
+          <div class="step-desc">When you are ready, we sign a planning agreement and collect a 50% deposit. We begin venue outreach and vendor sourcing immediately.</div>
+        </div>
+        <div>
+          <div class="step-number">03</div>
+          <div class="step-title">We Build It</div>
+          <div class="step-desc">We coordinate everything in the lead-up. You visit venues in June. We refine the plan. By wedding day, you just show up and enjoy it.</div>
+        </div>
+      </div>
+      <div class="payment-note">
+        50% deposit to begin · 50% balance due 90 days before the wedding
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CLOSING ============ -->
+  <section class="section-burgundy">
+    <div class="container fade-in">
+      <h2 style="color: var(--cream);">We would love to build this with you.</h2>
+      <div class="accent-line-gold" style="margin: 24px auto;"></div>
+      <p style="color: rgba(250,248,245,0.8); font-size: 15px;">Juri & Eamon</p>
+      <p style="color: var(--gold); font-family: 'Sen', sans-serif; font-size: 11px; letter-spacing: 4px; text-transform: uppercase; margin-top: 8px;">Married in Japan</p>
+    </div>
+  </section>
+
+  <!-- Scroll Animation Script -->
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
